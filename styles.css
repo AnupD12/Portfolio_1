@@ -1,0 +1,556 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(243, 241, 239, 1);
+    color: black;
+    font-family: 'Nunito', sans-serif;
+}
+
+strong{
+    color: #3ABEE6;
+}
+
+/* header*/
+/* logo styling used in a few locations */
+.brand-logo {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #e6623a;
+    padding-left: 2%;
+}
+
+/* making the home button expand on hover */
+.brand-logo:hover {
+    transform: scale(1.1,1.1);
+}
+
+.main-nav ul {
+    display: flex;
+    font-size: 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #e6623a;
+    text-decoration: none;
+    margin: 3rem;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.contact-us {
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #e6623a;
+}
+
+.contact-us a {
+    color: white;
+} 
+
+/* hero-image */
+.image-container {
+    height: 700px;
+}
+
+/* screen-image */
+.screen-image {
+    background-image: url(./Images/pexels-andrea-piacquadio-840996.jpg);
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.cover-text {
+    font-size: 4em;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 4px;
+    color: #e6623a;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 700px;
+}
+
+.cover-text h1 {
+    border: 2px solid rgba(230, 98, 58, .5);
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-left-style: none;
+    border-right-style: none;
+    border-radius: 10%;
+}
+
+/* Diagram section */
+.diagram {
+    height: 600px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    font-size: 2rem;
+}
+
+.diagram h2{
+    position: absolute;
+}
+
+/* positioning the main divs */
+.diagram-points {
+    text-align: center;
+    padding-top: 1%;
+    margin:  8rem;
+    width: 200px;
+    height: 100px;
+    border: 1px #3ABEE6;
+    border-radius: 10%;
+    background-color: rgba(230, 98, 58, .5);
+    color: rgba(243, 241, 239, 1);
+}
+
+
+/* background color change when hovering on a div */
+.diagram-points:hover {
+    background-color: rgba(58, 190, 230, .5);
+}
+
+/* design tool tip stucture */
+#tooltip-design {
+    position: absolute;
+    transform: translateX(-75%);
+    background-color: rgba(58, 190, 230, .5);
+    width: 200px;
+    font-size: 0.5em;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* install tool tip stucture */
+#tooltip-install {
+    position: absolute;
+    transform: translateX(-72%);
+    background-color: rgba(58, 190, 230, .5);
+    width: 200px;
+    font-size: 0.5em;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* service tool tip stucture */
+#tooltip-service {
+    position: absolute;
+    transform: translateX(-75%);
+    background-color: rgba(58, 190, 230, .5);
+    width: 200px;
+    font-size: 0.5em;
+    padding: 10px 15px;
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* making tool tips visible when hovering over title */
+#diagram-design:hover #tooltip-design {
+    top: 42%;
+    visibility: visible;
+    opacity: 1;
+}
+
+#diagram-install:hover #tooltip-install {
+    top: 42%;
+    visibility: visible;
+    opacity: 1;
+}
+
+#diagram-service:hover #tooltip-service {
+    top: 42%;
+    visibility: visible;
+    opacity: 1;
+}
+
+/* background circles */
+#circle-container-1 {
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    background-color: rgba(230, 98, 58, .2);
+    border-width: 1px;
+    border-radius: 50%;
+    margin-left: -50vw;
+    bottom: 5%;
+    z-index: -10;
+}
+
+#circle-container-2 {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    background-color: rgba(58, 190, 230, .1);
+    border-width: 1px;
+    border-radius: 50%;
+    right: 2vw;
+    bottom: 20%;
+    z-index: -10;
+    overflow: hidden;
+}
+
+#circle-container-3 {
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    background-color: rgba(230, 98, 58, .2);
+    border-width: 1px;
+    border-radius: 50%;
+    right: 75vw;
+    bottom: 60%;
+    z-index: -10;
+}
+
+/* topic sections */
+.topic {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 10%;
+}
+
+.topic-container {
+    height: 25vh;
+    width: 25%;
+    color: rgba(243, 241, 239, 1);
+    border: 2px outset rgba(230, 98, 58, .5);
+    border-radius: 10%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#av-image {
+    background-image: url("./Images/pawel-chu-ULh0i2txBCY-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.topic-heading {
+    text-align: center;
+    color: rgba(230, 98, 58, .8);
+}
+
+.topic-text {
+    color: black;
+}
+
+/* events section */
+.events {
+    display: flex;
+    flex-direction: row;
+    height: 60vh;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+
+.events-image {  
+    width: 50%;
+    background-image: url("./Images/harry-shelton-pPxhM0CRzl4-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+}
+
+.events-image h2 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5vh;
+    color: #e6623a;
+}
+
+.events-image h3 {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5vh;
+}
+
+
+/* Footer */
+footer {
+    color: #e6623a;
+}
+
+.brand-logo-name-footer {
+    /* float: left; */
+    padding-left: 15%;
+}
+
+.socials{
+    text-align: center;
+}
+
+.socials > li{
+    display: inline;
+}
+
+.socials a{
+    text-decoration: none;
+    /* color: #3a3a3a; */
+    font-size: 160%;
+    padding: 2%;
+}
+
+.facebook {
+    color: rgb(66, 103, 178);
+}
+
+.twitter {
+    color: rgb(29, 161, 242);
+}
+
+.youtube {
+    color: rgb(255, 0, 0);
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-details div{
+    font-family: 'Nunito', sans-serif;
+
+    padding-left: 10%;
+}
+
+/* media queries for landing page*/
+/* for larger to medium screen size from 1200px wide and down*/
+@media screen and (max-width: 950px) {
+    .main-header{
+        display: block;
+        float: left;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px;
+    }
+}
+
+/* contact us page styles */
+.form-heading {
+    display: grid;
+    margin-bottom: 5%;
+    align-items: center;
+    justify-content: center;
+}
+
+/* backgorund Circles */
+.contact-us-circle-1 {
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-color: rgba(188, 58,128, .1);
+    bottom: 5vw;
+    left: 5vw;
+    z-index: -1;
+}
+
+.contact-us-circle-2 {
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background-color:rgba(58, 190, 230, .1);
+    top: 12vw;
+    left: 30vw;
+    z-index: -1;
+}
+
+.contact-us-circle-3 {
+    position: absolute;
+    overflow: hidden;
+    width: 45vw;
+    height: 45vw;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.contact-us-circle-3::before{
+    content: '';
+    transform: translate(40%, 40%);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: rgba(58, 190, 230, .1);
+}
+
+/* form section */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55vh;
+    width: 100vw;
+    padding: 2em;
+}
+
+.contact-us-form {
+    width: 50vw;
+}
+
+.form-group {
+    margin-bottom: 5em;
+    transition: all .35s;
+}
+
+.label {
+    color: black;
+    display: block;
+    transform: translateY(-1.25em);
+    transform-origin: 0 0;
+    transition: all .35s;
+}
+
+.text-input {
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 5px;
+    border-color: #e6623a;
+    border-style: none none solid none;
+    width: 100%;
+    transition: all .5s;
+    padding:5px;
+}
+
+.text-input::placeholder {
+    color: transparent;
+}
+
+.text-input:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: #3ABEE6;
+}
+
+ /* change of color and transform when a line is selected */
+.text-input:focus + label {
+    color: #3ABEE6; 
+}
+
+.text-input:focus + .label,
+.text-input:not(:placeholder-shown) + .label
+{
+    transform: translateY(-2.5em) scale(.8);
+}
+
+.form-group:focus-within {
+    transform:scale(1.05, 1.3);
+}
+
+ .submit {
+    height: 10vh;
+    width: 10vw;
+    background-color: #e6623a;
+    border: 2px solid #e6623a;
+    border-radius: 10%;
+    font-size: 2em;
+    margin-bottom: 5%;
+}
+
+ .submit:hover {
+    transform: scale(1.10, 1.10);
+    color: rgba(243, 241, 239, 1);
+    background-color: #3ABEE6;
+    border: 2px solid #3ABEE6;
+}
+
+/* About Us Page */
+.av-section {
+    background-color: rgba(58, 190, 230, .1);
+    color: black;
+}
+.av-section h1 {
+    font-size: 2em;
+    color: #e6623a;
+}
+
+.av-text {
+    width: 50%;
+}
+
+.smart-building-section {
+    background-color: rgba(188, 58,128, .1);
+    margin-top: 0%;
+    padding-top: 0%;
+}
+
+.smart-building-section h1 {
+    font-size: 2em;
+    color: #3ABEE6;
+}
+
+.smart-building-text {
+    width: 50%;
+}
+
+.desk-booking-section {
+    background-color: rgba(58, 190, 230, .1);
+    color: black;
+}
+
+.desk-booking-section h1 {
+    font-size: 2em;
+    color: #e6623a;
+}
+
+.desk-booking-text {
+    width: 50%;
+}
+
+/* Case Studies Page */
+.case-studies-heading {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 10vh;
+    margin-bottom: 5%;
+    background-color: #e6623a;
+}
+
+.grid-container {
+    height: 40vh;
+    padding-left: 20%;
+    display: grid;
+    grid-template-columns: 500px 500px;
+    align-items: center;
+    margin-bottom: 38%;
+    gap: 2em;
+    column-gap: 2px;
+}
+
+
+
+
+
+
+
+
